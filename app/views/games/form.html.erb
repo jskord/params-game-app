@@ -1,0 +1,22 @@
+<h1> welcome to the guess a number game using a form! </h1>
+<form action="/form_result" method='post'>
+  <div>
+    <label for="message"> This form wont work !</label>
+    <input type="text" name="">
+  </div>
+  <div>
+    <input type="submit" value="Submit message!">
+  </div>
+
+</form>
+
+<h1> Welcome to the guess a number game using the rails form! </h1>
+<%= form_tag '/form_result', method: :post do %>
+  <div>
+    <%= label_tag :form_message, "Guess a number between 1 and 100: " %>
+    <%= text_field_tag :form_message %>
+  </div>
+  <div>
+    <%= submit_tag 'Submit message!' %>
+  </div>
+<%end%>
