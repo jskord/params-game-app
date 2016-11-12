@@ -1,5 +1,10 @@
-<h1>Hello</h1>
-<p><%= @name.upcase %> </p>
-<% if @name.starts_with?("A") %>
-  <p><%= @message %></p>
-  <%end%>
+<h1> Welcome to the guess a number game using the rails form! </h1>
+<%= form_tag '/form_result_name', method: :post do %>
+  <div>
+    <%= label_tag :form_message, "Enter your name: " %>
+    <%= text_field_tag :form_message %>
+  </div>
+  <div>
+    <%= submit_tag 'Submit message!' %>
+  </div>
+<%end%>
